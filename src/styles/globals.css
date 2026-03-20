@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f1219;
+  color: #e8e6e1;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #141820;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a4258;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a84c;
+}
+
+/* Typewriter animation */
+@keyframes typewriter {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.typewriter-char {
+  animation: typewriter 0.02s ease forwards;
+}
+
+/* Document viewer styles */
+.document-body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  line-height: 1.7;
+}
+
+.document-body h1, .document-body h2, .document-body h3 {
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Phase transition */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Blink cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Selection highlight */
+::selection {
+  background: #c9a84c33;
+  color: #e8e6e1;
+}
+
+/* Focus styles */
+input:focus, textarea:focus, button:focus {
+  outline: 1px solid #c9a84c;
+  outline-offset: 1px;
+}
+
+.panel-border {
+  border: 1px solid #3a4258;
+}
+
+.gold-border {
+  border: 1px solid #c9a84c;
+}
